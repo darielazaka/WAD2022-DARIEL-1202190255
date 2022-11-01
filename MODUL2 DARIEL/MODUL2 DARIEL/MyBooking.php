@@ -52,9 +52,9 @@
                         error_reporting(0);
                         ini_set('display_errors', 0);
                         $nama = $_POST['nama'];
-                        $tipemobil = $_POST['listdata'];
+                        $tipemobil = $_POST['listdatas'];
                         $waktu =$_POST['start'];
-                        $lama = $_POST['duration'];
+                        $lama = $_POST['time'];
                        
                         $tanggalbook = date('d/m/Y', strtotime($_POST['masukintanggal']));
                         $cekout = date('d/m/Y', strtotime("+$lama days", strtotime($_POST['masukintanggal'])));
@@ -96,13 +96,13 @@
                         if ($tambahservice == 0) {
                             echo 'NO SERVICES ADDED'; # 
                         } else {
-                            for ($i = 0; $i < count($tambahservice); $i++) {
+                            for ($i = 0; $i < count($tambahservices); $i++) {
                                 echo '<li>' . $tambahservice[$i] . '</li>';
                             }
                         }
 
                         echo '</ul></td>
-                    <td> Rp.' . $totalPrice . '</td>
+                    <td> Rp.' . $totalPrices . '</td>
                     '
                         ?>
                     </tr>
